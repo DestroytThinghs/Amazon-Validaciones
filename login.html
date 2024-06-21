@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión en Amazon</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+        </div>
+        <div class="login-form">
+            <h1>Iniciar sesión</h1>
+            <form>
+                <label for="email">E-mail o celular</label>
+                <input type="text" id="email" name="email">
+                <label for="pass">Contraceña</label>
+                <input type="password" id="pass" name="pass">
+                <button type="submit">Continuar</button>
+                <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+            </form>
+            <p>Al continuar, aceptas las <a href="#">Condiciones de uso</a> y el <a href="#">Aviso de privacidad</a> de Amazon.</p>
+            <a href="#" class="help-link">¿Olvidaste tu contraseña?</a>
+            <a href="#" class="help-link">¿Olvidaste tu usuario?</a>
+            <div class="business-prompt">
+                <p>¿Compras para el trabajo?</p>
+                <a href="#">Compra en Amazon Business</a>
+            </div>
+            <div class="new-user">
+                <p>¿Eres nuevo en Amazon?</p>
+                <button class="create-account">Crea tu cuenta de Amazon</button>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="#">Condiciones de uso</a>
+            <a href="#">Aviso de privacidad</a>
+            <a href="#">Ayuda</a>
+        </div>
+        <p class="copyright">© 1996-2024, Amazon.com, Inc. o sus afiliados</p>
+    </div>
+</body>
+</html>

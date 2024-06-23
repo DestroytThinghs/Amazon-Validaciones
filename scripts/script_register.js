@@ -51,7 +51,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
 
     // Edad
     const age = document.getElementById('age');
-    if (age.value < 0 || age.value > 100) {
+    if (age.value < 18 || age.value > 100) {
         age.classList.add('invalid');
         valid = false;
     } else {

@@ -67,7 +67,7 @@ $conn->close();
                 <button type="button">🔍</button>
             </div>
             <div class="account-section">
-                <span>ES</span>
+                <span>ES</span>   
                 <span><p><strong>Bienvenido, </strong> <?php echo $nombre; ?></p></span>
                 <span>Cuenta y Listas</span>
                 <span>Devoluciones y Pedidos</span>

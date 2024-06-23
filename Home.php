@@ -86,25 +86,33 @@ $conn->close();
     </header>
     <main>
         <section class="banner">
-            <h1>Regalos geniales para cada papá</h1>
+            <h1>Regalos geniales para ti mi Rey</h1>
         </section>
         <section class="offers">
             <div class="offer-item">
                 <h2>Envío gratis a Perú</h2>
-                <img src="envio-gratis.png" alt="Envío gratis a Perú">
+                <img src="https://scontent.fjau1-1.fna.fbcdn.net/v/t39.30808-6/398445253_970412717779026_5999055602071107571_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHGFCGx88bZ-i5hduRjSXqAgpZKkH4gyj2ClkqQfiDKPfuIctJpdklKAuHsOShusTjzlc5nyC1gvKXx5MFxTVhp&_nc_ohc=JkqepnpwMN4Q7kNvgFyxk-2&_nc_ht=scontent.fjau1-1.fna&cb_e2o_trans=t&oh=00_AYBE8smRO8NAKXo6KdnndTMws90NJ_NsYJjLF91Akhv2xg&oe=667DB134" alt="Envío gratis a Perú">
             </div>
             <div class="offer-item">
                 <h2>Renueva tu espacio</h2>
                 <div class="sub-items">
-                    <div>Comedor</div>
-                    <div>Inicio</div>
-                    <div>Cocina</div>
-                    <div>Salud y Belleza</div>
+                <div>Comedor
+                        <img src="https://cdnx.jumpseller.com/formashome/image/49319696/resize/640/640?1717195145" alt="Envío gratis a Perú">
+                    </div>
+                    <div>Inicio
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1wX-FdRvFca6TRloTtnypl8RDkAZ7x19z8D60CmSVSTjC1KS9tByW3_P5BPMyepvCDYJh2TQtba0sn7ti528DZYoydbLa-JBRHOPJmCm_HV8v4E80yXpVy7NSZXUtg7b46hB5hFJ85Trb_Quu1ujrmuolPdZM6nDy6YpFnhxFIMYYSsVU7LeFXbD40w/w1064-h598/LA%20HISTORIA%20DE%20AMAZON%20DE%20UNA%20PEQUE%C3%91A%20LIBRER%C3%8DA%20EN%20L%C3%8DNEA%20A%20UN%20GIGANTE%20DEL%20COMERCIO%20ELECTR%C3%93NICO.png" alt="Envío gratis a Perú">
+                    </div>
+                    <div>Cocina
+                        <img src="https://cdnx.jumpseller.com/formashome/image/49319696/resize/640/640?1717195145" alt="Envío gratis a Perú">
+                    </div>
+                    <div>Salud y Belleza
+                        <img src="https://peruretail.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/Amazon-ampli%C3%B3-oferta-online-en-cosm%C3%A9tica-y-cuidado-personal.jpg" alt="Envío gratis a Perú">
+                    </div>
                 </div>
             </div>
             <div class="offer-item">
                 <h2>Ofertas en Equipos</h2>
-                <img src="ofertas-equipos.png" alt="Ofertas en Equipos">
+                <img src="https://i.blogs.es/9580c5/ofertas-del-dia/1366_2000.webp" alt="Ofertas en Equipos">
             </div>
         </section>
     </main>

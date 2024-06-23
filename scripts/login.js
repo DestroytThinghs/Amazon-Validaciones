@@ -13,6 +13,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (password.trim() === '') {
         alert('Por favor ingresa tu contraseña.');
         return;
+    }else{
+        alert("usuario y contraseña corrcto")
+        return;
     }
 
     // Si todo está correcto, enviar el formulario

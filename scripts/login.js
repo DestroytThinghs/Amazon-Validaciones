@@ -2,7 +2,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     event.preventDefault();
     
     const email = document.getElementById('email').value;
-    const password = document.getElementById('pass').value;
+    const password = document.getElementById('contrasena').value;
 
     // Validación simple del email y la contraseña
     if (email.trim() === '') {

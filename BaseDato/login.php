@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Obtener los datos del formulario
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['contrasena'];
 
     // Consultar si el usuario existe
     $sql = "SELECT * FROM users WHERE email = ?";
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         $user = $result->fetch_assoc();
         // Verificar la contraseña
-        if (password_verify($password, $user['password'])) {
+        if (password_verify($password, $user['contrasena'])) {
             // La contraseña es correcta, iniciar sesión o redirigir a la página de inicio
             echo "Login exitoso. Redirigiendo...";
             // Aquí puedes iniciar sesión y redirigir al usuario

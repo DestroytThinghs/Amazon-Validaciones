@@ -15,8 +15,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         return;
     }
 
-    // Aquí puedes agregar más validaciones si las necesitas
-
     // Si todo está correcto, enviar el formulario
     this.submit();
 });

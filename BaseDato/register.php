@@ -39,8 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($_POST["age"])) {
         $age = $_POST["age"];
-        if ($age < 0 || $age > 100) {
-            $errors[] = "La edad debe estar entre 0 y 100 años.";
+        if ($age < 18 || $age > 100) {
+            $errors[] = "La edad debe estar entre 18 y 100 años.";
         }
     } else {
         $errors[] = "La edad no fue enviada.";
@@ -76,10 +76,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $age = $conn->real_escape_string($age);
 
     // Insertar el registro en la tabla de usuarios
-    $sql = "INSERT INTO users (nombre, phone, email, contrasena, age) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO users (nombre, phone, email, password, age) VALUES (?, ?, ?, ?, ?)";
     
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssss", $nombre, $phone, $email, $contrasena_hash, $age);
+    $stmt->bind_param("ssssi", $nombre, $phone, $email, $contrasena_hash, $age);
 
     if ($stmt->execute()) {
         echo "Usuario registrado correctamente.";

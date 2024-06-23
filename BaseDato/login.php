@@ -31,6 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // La contraseña es correcta, iniciar sesión o redirigir a la página de inicio
             echo "Login exitoso. Redirigiendo...";
             // Aquí puedes iniciar sesión y redirigir al usuario
+            header("Location: index.html");
+            exit();
         } else {
             echo "Contraseña incorrecta.";
         }

@@ -1,15 +1,31 @@
 <?php
 session_start();
 
-// Verificar si ya hay una sesión iniciada
-if (isset($_SESSION['user_id'])) {
-    // Si hay sesión iniciada, redirigir al Home.php o a la página principal del usuario
-    header("Location: ../Home.php");
-    exit;
+// Definir variables de sesión si no existen
+if (!isset($_SESSION['login_attempts'])) {
+    $_SESSION['login_attempts'] = 0;
+}
+
+if (!isset($_SESSION['last_attempt_time'])) {
+    $_SESSION['last_attempt_time'] = time();
 }
 
 // Verificar si se ha enviado el formulario de inicio de sesión
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verificar límite de intentos
+    if ($_SESSION['login_attempts'] >= 3) {
+        // Verificar si ha pasado 1 minuto desde el último intento fallido
+        $timeSinceLastAttempt = time() - $_SESSION['last_attempt_time'];
+        if ($timeSinceLastAttempt < 60) { // 60 segundos = 1 minuto
+            echo "Has excedido el número de intentos permitidos. Inténtalo de nuevo en " . (60 - $timeSinceLastAttempt) . " segundos.";
+            exit;
+        } else {
+            // Reiniciar contador de intentos y tiempo de último intento
+            $_SESSION['login_attempts'] = 0;
+            $_SESSION['last_attempt_time'] = time();
+        }
+    }
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -42,16 +58,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['nombre'] = $user['nombre'];
 
+            // Reiniciar contador de intentos y tiempo de último intento
+            $_SESSION['login_attempts'] = 0;
+            $_SESSION['last_attempt_time'] = time();
+
             // Redirigir al Home.php después de iniciar sesión correctamente
             header("Location: ../Home.php");
             exit;
         } else {
             // Contraseña incorrecta
-            echo "Contraseña incorrecta. Inténtalo de nuevo.";
+            $_SESSION['login_attempts']++;
+            echo "Contraseña incorrecta. Intento $_SESSION[login_attempts] de 3.";
         }
     } else {
         // Usuario no encontrado
-        echo "Usuario no encontrado. Inténtalo de nuevo.";
+        $_SESSION['login_attempts']++;
+        echo "Usuario no encontrado. Intento $_SESSION[login_attempts] de 3.";
     }
 
     $stmt->close();
